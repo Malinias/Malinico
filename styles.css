@@ -27,3 +27,7 @@ nav a:hover {
   background-color: #333;
   color: black;
 }
+
+body {
+  background-color: #ffcc00; 
+}
