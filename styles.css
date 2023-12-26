@@ -1,0 +1,29 @@
+/* CSS for Navigation Bar */
+nav {
+  background-color: #333; /* Background color of the navigation bar */
+  overflow: hidden; /* Clear any floated elements inside the nav */
+}
+
+nav ul {
+  list-style-type: none; /* Remove list bullets */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left; /* Make list items appear horizontally */
+}
+
+nav a {
+  display: block;
+  color: white; /* Text color of the links */
+  text-align: center;
+  padding: 14px 16px; /* Padding around the links */
+  text-decoration: none;
+}
+
+/* Change the color on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
