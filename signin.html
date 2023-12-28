@@ -16,28 +16,64 @@
       align-items: center;
     }
 
-   nav {
-  background-color: #333; /* Background color of the navigation bar */
-  overflow: hidden; /* Clear any floated elements inside the nav */
-}
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between; /* Adjusted for space between logo/buttons and search bar */
+      align-items: center;
+      padding: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
 
-nav ul {
-  list-style-type: none; /* Remove list bullets */
-  margin: 0;
-  padding: 0;
-}
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center; /* Align items vertically in the navbar */
+    }
 
-nav li {
-  float: left; /* Make list items appear horizontally */
-}
+    nav li {
+      margin-right: 15px; /* Adjusted margin for spacing between navbar items */
+    }
 
-nav a {
-  display: block;
-  color: white; /* Text color of the links */
-  text-align: center;
-  padding: 14px 16px; /* Padding around the links */
-  text-decoration: none;
-}
+    nav a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px 16px;
+    }
+
+    #search-form {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #FF0000; /* Red background color */
+      color: #fff;
+      margin-right: 4px;
+    }
+
+    button {
+      background-color: #FF0000; /* Red background color */
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
 
     #content-container {
       display: flex;
@@ -48,8 +84,8 @@ nav a {
     }
 
     #image-container {
-      width: 100px; /* Adjust the width as needed */
-      margin-right: 20px; /* Adjust the margin as needed */
+      width: 100px;
+      margin-right: 20px;
     }
 
     #image-container img {
@@ -62,7 +98,7 @@ nav a {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      flex-grow: 1; /* Take remaining width */
+      flex-grow: 1;
     }
 
     #signin-form {
@@ -92,19 +128,6 @@ nav a {
       box-sizing: border-box;
     }
 
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
   </style>
 </head>
 <body>
@@ -115,11 +138,11 @@ nav a {
       <li><a href="industries.html">Industries</a></li>
       <li><a href="Windowsvideos.html">Windows Videos</a></li>
       <li><a href="signin.html">Sign In</a></li>
-      <li><a href="Mboypants.html">Mboy pants</a></li>
       <form id="search-form">
         <input type="text" id="search-input" placeholder="Search...">
         <button type="button" onclick="performSearch()">Search</button>
       </form>
+      <li><a href="Mboypants.html">Mboy pants</a></li>
     </ul>
   </nav>
 
@@ -131,37 +154,3 @@ nav a {
     <div id="signin-container">
       <form id="signin-form">
         <h2>Sign In</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="button" onclick="signIn()">Sign In</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    function signIn() {
-      // Get form values
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-
-      // Validate form values (add more validation as needed)
-      if (username === '' || password === '') {
-        alert('Please fill in all fields.');
-        return;
-      }
-
-      // Simulate sending data to the server (in a real application, use AJAX or fetch to send data to the server)
-      // Here, we'll just log the data to the console
-      console.log('Sign In Data:', { username, password });
-
-      // You would typically send this data to the server for authentication
-      // Server-side code would handle securely authenticating the user
-    }
-  </script>
-
-</body>
-</html>
