@@ -5,67 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malini.co</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<nav>
-  <ul>
-    <li><a href="index.html"><img src="https://media.discordapp.net/attachments/1041976207383728138/1189418505653727292/3903CC3A-8751-410B-A398-41F7E073B33C.png?ex=659e174e&is=658ba24e&hm=fab8bc6ddda0d068a807f2486385de00c8a1019c9f2fe630fb5d5a0bcb02b2a9&=&format=webp&quality=lossless&width=964&height=826" alt="Logo" alt="Description" width="50" height="50"></a></li>
-    <li><a href="industries.html">Industries</a></li>
-    <li><a href="Windowsvideos.html">Windows Videos</a></li>
-    <li><a href="signin.html">Sign In</a></li>
-    <li><a href="Mboypants.html">Mboy pants</a></li>
-  </ul>
-</nav>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malini.co</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-color: #FF0044; /* Replace #ffcc00 with your desired color code */
-    }
-  </style>
-  
-<nav>
-</nav>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cool Sign In</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
+      background-color: #FF0044;
       margin: 0;
       padding: 0;
-      background-color: #1a1a1a;
-      color: #fff;
+      font-family: 'Arial', sans-serif;
       display: flex;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    #content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #image-container {
+      width: 100px; /* Adjust the width as needed */
+      margin-right: 20px; /* Adjust the margin as needed */
+    }
+
+    #image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
     #signin-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    #signin-form {
       background-color: #2d2d2d;
       padding: 30px;
       border-radius: 8px;
@@ -109,17 +112,33 @@
 </head>
 <body>
 
-  <div id="signin-container">
-    <h2>Sign In</h2>
-    <form id="signin-form">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+  <nav>
+    <ul>
+      <li><a href="index.html"><img src="https://media.discordapp.net/attachments/1041976207383728138/1189418505653727292/3903CC3A-8751-410B-A398-41F7E073B33C.png?ex=659e174e&is=658ba24e&hm=fab8bc6ddda0d068a807f2486385de00c8a1019c9f2fe630fb5d5a0bcb02b2a9&=&format=webp&quality=lossless&width=964&height=826" alt="Logo" width="50" height="50"></a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="Windowsvideos.html">Windows Videos</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="Mboypants.html">Mboy pants</a></li>
+    </ul>
+  </nav>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+  <div id="content-container">
+    <div id="image-container">
+      <img src="https://placekitten.com/100/100" alt="Style Image">
+    </div>
 
-      <button type="button" onclick="signIn()">Sign In</button>
-    </form>
+    <div id="signin-container">
+      <form id="signin-form">
+        <h2>Sign In</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="signIn()">Sign In</button>
+      </form>
+    </div>
   </div>
 
   <script>
