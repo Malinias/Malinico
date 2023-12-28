@@ -16,26 +16,28 @@
       align-items: center;
     }
 
-    nav {
-      background-color: #333;
-      color: #fff;
-      width: 100%;
-      box-sizing: border-box;
-    }
+   nav {
+  background-color: #333; /* Background color of the navigation bar */
+  overflow: hidden; /* Clear any floated elements inside the nav */
+}
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
+nav ul {
+  list-style-type: none; /* Remove list bullets */
+  margin: 0;
+  padding: 0;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #fff;
-    }
+nav li {
+  float: left; /* Make list items appear horizontally */
+}
+
+nav a {
+  display: block;
+  color: white; /* Text color of the links */
+  text-align: center;
+  padding: 14px 16px; /* Padding around the links */
+  text-decoration: none;
+}
 
     #content-container {
       display: flex;
