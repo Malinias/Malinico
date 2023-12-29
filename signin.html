@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      background: linear-gradient(to bottom, #001e3c, #0c3057);
+      background: linear-gradient(to bottom, #dc143c, #8b0000); /* Changed gradient to crimson */
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
+      border: 5px solid #000; /* Added border to the page */
     }
 
     nav {
@@ -21,10 +22,11 @@
       overflow: hidden;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start; /* Adjusted to align items higher */
-      padding: 0.3em; /* Adjusted padding for a slightly thinner nav bar */
+      align-items: flex-start;
+      padding: 0.3em;
       width: 100%;
       box-sizing: border-box;
+      border-bottom: 2px solid #fff; /* Added border at the bottom of the nav bar */
     }
 
     nav ul {
@@ -36,7 +38,7 @@
     }
 
     nav li {
-      margin-right: 10px; /* Adjusted margin for slightly more space between items */
+      margin-right: 10px;
     }
 
     nav a {
@@ -44,7 +46,7 @@
       color: white;
       text-align: center;
       text-decoration: none;
-      padding: 8px 12px; /* Adjusted padding for a slightly smaller font size */
+      padding: 8px 12px;
     }
 
     #search-form {
@@ -64,11 +66,11 @@
     button {
       background-color: #FF0000;
       color: #fff;
-      padding: 8px 14px; /* Adjusted padding for a slightly smaller font size */
+      padding: 8px 14px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 12px; /* Adjusted font size */
+      font-size: 12px;
     }
 
     button:hover {
@@ -81,17 +83,30 @@
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
+      border-top: 2px solid #fff; /* Added border at the top of the content container */
+      border-bottom: 2px solid #fff; /* Added border at the bottom of the content container */
     }
 
     #image-container {
-      width: 100px;
+      width: 200px; /* Made the image container wider */
       margin-right: 20px;
+      position: relative;
     }
 
     #image-container img {
       width: 100%;
       height: auto;
       border-radius: 8px;
+      border: 2px solid #fff; /* Added border to the image */
+    }
+
+    #line-design {
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: #fff;
+      left: 50%; /* Positioned the line in the center of the image container */
+      transform: translateX(-50%);
     }
 
     #signin-container {
@@ -147,7 +162,8 @@
 
   <div id="content-container">
     <div id="image-container">
-      <img src="https://placekitten.com/100/100" alt="Style Image">
+      <div id="line-design"></div>
+      <img src="https://placekitten.com/200/200" alt="Style Image"> <!-- Larger image -->
     </div>
 
     <div id="signin-container">
