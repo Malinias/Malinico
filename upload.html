@@ -68,3 +68,40 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Upload</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Upload Video</h2>
+  <!-- Add your video upload form here -->
+  <input type="file" id="video-upload" accept="video/*">
+  <button onclick="uploadVideo()">Upload</button>
+
+  <script>
+    function uploadVideo() {
+      const videoUploadInput = document.getElementById('video-upload');
+      const videoFile = videoUploadInput.files[0];
+
+      if (videoFile) {
+        // Convert the video to a data URL and save it to localStorage
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const videoDataUrl = e.target.result;
+          localStorage.setItem('uploadedVideo', videoDataUrl);
+          alert('Video uploaded successfully!');
+        };
+        reader.readAsDataURL(videoFile);
+      } else {
+        alert('Please select a video to upload.');
+      }
+    }
+  </script>
+</body>
+</html>
+
