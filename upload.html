@@ -26,7 +26,7 @@
       margin-bottom: 10px;
     }
 
-    input {
+    input, select, textarea {
       width: 100%;
       padding: 8px;
       margin-bottom: 15px;
@@ -34,20 +34,34 @@
     }
 
     button {
-      background-color: #3498db;
+      background-color: #ff0000; /* Red color for buttons */
       color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
+
+    #video-upload {
+      margin-bottom: 20px;
+    }
+
+    #video-preview {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      display: none;
+    }
   </style>
 </head>
 <body>
 
   <div id="upload-form">
-    <h2>Upload Content</h2>
-    <form>
+    <h2>Upload Video</h2>
+    <form id="video-upload-form">
+      <label for="uploadTitle">Title:</label>
+      <input type="text" id="uploadTitle" name="uploadTitle" required>
+
       <label for="uploadType">Select upload type:</label>
       <select id="uploadType" name="uploadType">
         <option value="video">Video</option>
@@ -56,37 +70,27 @@
         <option value="tweet">Tweet</option>
       </select>
 
-      <label for="uploadFile">Choose file:</label>
-      <input type="file" id="uploadFile" name="uploadFile" accept="video/*,image/*">
+      <label for="video-upload">Choose video file:</label>
+      <input type="file" id="video-upload" name="videoUpload" accept="video/*" required>
 
       <label for="uploadDescription">Description:</label>
-      <textarea id="uploadDescription" name="uploadDescription" rows="4"></textarea>
+      <textarea id="uploadDescription" name="uploadDescription" rows="4" required></textarea>
 
-      <button type="submit">Upload</button>
+      <button type="button" onclick="uploadVideo()">Upload</button>
+
+      <!-- Display the video preview -->
+      <video id="video-preview" controls></video>
     </form>
   </div>
 
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Upload</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h2>Upload Video</h2>
-  <!-- Add your video upload form here -->
-  <input type="file" id="video-upload" accept="video/*">
-  <button onclick="uploadVideo()">Upload</button>
-
   <script>
     function uploadVideo() {
+      const videoUploadForm = document.getElementById('video-upload-form');
+      const videoTitle = document.getElementById('uploadTitle').value;
+      const videoType = document.getElementById('uploadType').value;
       const videoUploadInput = document.getElementById('video-upload');
       const videoFile = videoUploadInput.files[0];
+      const videoDescription = document.getElementById('uploadDescription').value;
 
       if (videoFile) {
         // Convert the video to a data URL and save it to localStorage
@@ -94,6 +98,17 @@
         reader.onload = function (e) {
           const videoDataUrl = e.target.result;
           localStorage.setItem('uploadedVideo', videoDataUrl);
+          
+          // For demonstration, let's log the details
+          console.log('Title:', videoTitle);
+          console.log('Type:', videoType);
+          console.log('Description:', videoDescription);
+
+          // Display the video preview
+          const videoPreview = document.getElementById('video-preview');
+          videoPreview.src = videoDataUrl;
+          videoPreview.style.display = 'block';
+
           alert('Video uploaded successfully!');
         };
         reader.readAsDataURL(videoFile);
