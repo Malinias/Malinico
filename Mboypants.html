@@ -12,12 +12,82 @@
       background-color: #FFD700; /* Change background color to a brighter shade of yellow */
       color: #333333; /* Change text color to dark gray */
       font-family: Arial, sans-serif; /* Use a common font */
-      display: flex;
-      justify-content: center; /* Center the content horizontally */
-      align-items: center; /* Center the content vertically */
-      height: 100vh; /* Set full height */
+      padding-top: 50px; /* Add padding to the top of the body to accommodate the navbar */
+    }
+    nav {
+      position: fixed; /* Make the navbar fixed at the top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333333; /* Change navbar background color */
+      color: #ffffff; /* Change navbar text color to white */
+      padding: 10px 0; /* Add padding to the navbar */
+      z-index: 1000; /* Set a high z-index to ensure the navbar is on top of other content */
     }
 
+    .nav-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-container img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .nav-container ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-container ul li {
+      margin: 0 10px;
+    }
+
+    .nav-container ul li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-container form {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+      background-color: transparent;
+      color: #ffffff;
+      margin-right: 10px;
+    }
+
+    #search-button, #upload-button {
+      padding: 8px 15px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #333333;
+      cursor: pointer;
+    }
+
+    #upload-button {
+      background-color: #ff0000;
+      margin-left: 10px;
+    }
+
+    h1, h3 {
+      text-align: center;
+      color: #333333; /* Change heading color to dark gray */
+    }
+
+    /* Additional styles for other elements */
     .product-container {
       display: flex;
       flex-wrap: wrap;
@@ -34,58 +104,25 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
-
-    h1, h3 {
-      text-align: center;
-      color: #333333; /* Change heading color to dark gray */
-    }
-
-    /* Additional styles for other elements */
-    #search-form {
-      display: flex;
-      align-items: center;
-    }
-
-    #search-input {
-      flex-grow: 1;
-      margin-right: 10px;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #333333;
-      background-color: #ffffff;
-      color: #333333;
-    }
-
-    #search-button, #upload-button {
-      padding: 8px 15px;
-      border: 1px solid #333333;
-      border-radius: 5px;
-      background-color: #333333;
-      color: #ffffff;
-      cursor: pointer;
-    }
-
-    #upload-button {
-      background-color: #ff0000;
-      margin-left: 10px;
-    }
   </style>
 </head>
 <body>
   <nav>
-    <ul>
-      <li><a href="index.html"><img src="https://app.gemoo.com/share/image-annotation/631413435159515136?codeId=v67G2WGwl4RJl&origin=imageurlgenerator&card=631413429014859776" alt="Logo" alt="Description" width="50" height="50"></a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="Windowsvideos.html">Windows Videos</a></li>
-      <li><a href="unitreason.html">Unit Reason</a></li>
-      <li><a href="signin.html">Sign In</a></li>
-      <li><a href="Mboypants.html">Mboy pants</a></li>
+    <div class="nav-container">
+      <a href="index.html"><img src="https://app.gemoo.com/share/image-annotation/631413435159515136?codeId=v67G2WGwl4RJl&origin=imageurlgenerator&card=631413429014859776" alt="Logo" alt="Description"></a>
+      <ul>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="Windowsvideos.html">Windows Videos</a></li>
+        <li><a href="unitreason.html">Unit Reason</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="Mboypants.html">Mboy pants</a></li>
+      </ul>
       <form id="search-form">
         <input type="text" id="search-input" placeholder="Search...">
         <button id="search-button" type="button" onclick="performSearch()">Search</button>
         <button id="upload-button" onclick="window.location.href = 'https://malinias.github.io/Malinico/unitreason.html'">Upload</button>
       </form>
-    </ul>
+    </div>
   </nav>
 
   <h1>Mboy pants!</h1>
@@ -128,4 +165,3 @@
 
 </body>
 </html>
-
