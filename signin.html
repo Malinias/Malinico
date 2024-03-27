@@ -1,165 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malini.co</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Add your custom CSS styles here */
     body {
-      background: linear-gradient(to bottom, #dc143c, #8b0000);
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 5px solid #000;
+      background-color: #000000;
+      color: #ffffff; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Use a common font */
     }
+    /* Move inline styles to the CSS file for better organization */
 
+    /* Add CSS rules for nav, h1, h3, etc. */
     nav {
-      background-color: #333;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0.3em;
-      width: 100%;
-      box-sizing: border-box;
-      border-bottom: 2px solid #fff;
+      /* Your navigation styles */
     }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-    }
-
-    nav li {
-      margin-right: 10px;
-    }
-
-    nav a {
-      display: block;
-      color: white;
+    h1, h3 {
       text-align: center;
-      text-decoration: none;
-      padding: 8px 12px;
     }
 
+    /* Additional styles for other elements */
     #search-form {
       display: flex;
       align-items: center;
     }
 
     #search-input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      background-color: #FF0000;
-      color: #fff;
-      margin-right: 4px;
-    }
-
-    button {
-      background-color: #FF0000;
-      color: #fff;
-      padding: 8px 14px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 12px;
-    }
-
-    button:hover {
-      background-color: #cc0000;
-    }
-
-    #content-container {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      border-top: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-    }
-
-    #image-container {
-      width: 200px;
-      margin-right: 20px;
-      position: relative;
-    }
-
-    #image-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 2px solid #fff;
-    }
-
-    #line-design {
-      position: absolute;
-      height: 100%;
-      width: 2px;
-      background-color: #fff;
-      left: 50%;
-      transform: translateX(-50%);
-      display: none; /* Hidden the line */
-    }
-
-    #signin-container {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
       flex-grow: 1;
+      margin-right: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+      background-color: transparent;
+      color: #ffffff;
     }
 
-    #signin-form {
-      background-color: #2d2d2d;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
+    #search-button {
+      padding: 8px 15px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      background-color: transparent;
+      color: #ffffff;
+      cursor: pointer;
     }
 
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      text-align: left;
-    }
-
-    input {
-      width: calc(100% - 16px);
-      padding: 10px;
-      margin-bottom: 20px;
-      box-sizing: border-box;
+    #upload-button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff0000;
+      color: #ffffff;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
   <nav>
     <ul>
-      <li><a href="index.html"><img src="https://media.discordapp.net/attachments/1041976207383728138/1189418505653727292/3903CC3A-8751-410B-A398-41F7E073B33C.png?ex=659e174e&is=658ba24e&hm=fab8bc6ddda0d068a807f2486385de00c8a1019c9f2fe630fb5d5a0bcb02b2a9&=&format=webp&quality=lossless&width=964&height=826" alt="Logo" width="50" height="50"></a></li>
+      <li><a href="index.html"><img src="https://app.gemoo.com/share/image-annotation/631413435159515136?codeId=v67G2WGwl4RJl&origin=imageurlgenerator&card=631413429014859776" alt="Logo" alt="Description" width="50" height="50"></a></li>
       <li><a href="industries.html">Industries</a></li>
       <li><a href="Windowsvideos.html">Windows Videos</a></li>
+      <li><a href="unitreason.html">Unit Reason</a></li>
       <li><a href="signin.html">Sign In</a></li>
       <li><a href="Mboypants.html">Mboy pants</a></li>
       <form id="search-form">
         <input type="text" id="search-input" placeholder="Search...">
-        <button type="button" onclick="performSearch()">Search</button>
+        <button id="search-button" type="button" onclick="performSearch()">Search</button>
+        <button id="upload-button" onclick="window.location.href = 'https://malinias.github.io/Malinico/unitreason.html'">Upload</button>
       </form>
     </ul>
   </nav>
+</body>
+</html>
 
   <div id="content-container">
     <div id="image-container">
