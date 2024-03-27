@@ -9,19 +9,35 @@
   <style>
     /* Add your custom CSS styles here */
     body {
-      background-color: #000000;
-      color: #ffffff; /* Change text color to white */
+      background-color: #ffffcc; /* Change background color to yellow */
+      color: #333333; /* Change text color to dark gray */
       font-family: Arial, sans-serif; /* Use a common font */
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      height: 100vh; /* Set full height */
     }
-    /* Move inline styles to the CSS file for better organization */
 
-    /* Add CSS rules for nav, h1, h3, etc. */
-    nav {
-      /* Your navigation styles */
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .product-card {
+      width: 200px;
+      padding: 20px;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     h1, h3 {
       text-align: center;
+      color: #333333; /* Change heading color to dark gray */
     }
 
     /* Additional styles for other elements */
@@ -35,27 +51,23 @@
       margin-right: 10px;
       padding: 8px;
       border-radius: 5px;
-      border: 1px solid #ffffff;
-      background-color: transparent;
-      color: #ffffff;
+      border: 1px solid #333333;
+      background-color: #ffffff;
+      color: #333333;
     }
 
-    #search-button {
+    #search-button, #upload-button {
       padding: 8px 15px;
-      border: 1px solid #ffffff;
+      border: 1px solid #333333;
       border-radius: 5px;
-      background-color: transparent;
+      background-color: #333333;
       color: #ffffff;
       cursor: pointer;
     }
 
     #upload-button {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
       background-color: #ff0000;
-      color: #ffffff;
-      cursor: pointer;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -75,8 +87,6 @@
       </form>
     </ul>
   </nav>
-</body>
-</html>
 
   <h1>Mboy pants!</h1>
   <h3>Better than jnco!</h3>
@@ -118,3 +128,4 @@
 
 </body>
 </html>
+
