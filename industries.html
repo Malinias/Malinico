@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,10 @@
   <style>
     /* Add your custom CSS styles here */
     body {
-      background-color: #000000;
+      background-color: #FF69B4; /* Change background color to pinkish red */
       color: #ffffff; /* Change text color to white */
       font-family: Arial, sans-serif; /* Use a common font */
+      padding-top: 50px; /* Add padding to the top of the body to accommodate the navbar */
     }
     /* Move inline styles to the CSS file for better organization */
 
@@ -20,42 +22,42 @@
       /* Your navigation styles */
     }
 
-    h1, h3 {
+    h1, h2, h3 {
+      text-align: center;
+      color: #ffffff; /* Change heading color to white */
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
       text-align: center;
     }
 
     /* Additional styles for other elements */
-    #search-form {
+    .product-container {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
 
-    #search-input {
-      flex-grow: 1;
-      margin-right: 10px;
-      padding: 8px;
-      border-radius: 5px;
+    .product-card {
+      width: 300px;
+      padding: 20px;
       border: 1px solid #ffffff;
-      background-color: transparent;
-      color: #ffffff;
+      border-radius: 10px;
+      background-color: #800080; /* Change product card background color to purple */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    #search-button {
-      padding: 8px 15px;
-      border: 1px solid #ffffff;
-      border-radius: 5px;
-      background-color: transparent;
-      color: #ffffff;
-      cursor: pointer;
-    }
-
-    #upload-button {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ff0000;
-      color: #ffffff;
-      cursor: pointer;
+    .product-card h2, .product-card p {
+      color: #ffffff; /* Change text color inside product cards to white */
     }
   </style>
 </head>
@@ -75,10 +77,8 @@
       </form>
     </ul>
   </nav>
-</body>
-</html>
 
-<h1>WELCOME TO BIONECT INDUSTRIES&nbsp;<br /><br /></h1>
+  <h1>WELCOME TO BIONECT INDUSTRIES&nbsp;<br /><br /></h1>
 <h2 style="text-align: center;">Major Projects include&nbsp;<br /><br /></h2>
 <ul>
 <li style="text-align: center;"><span style="color: #cc99ff;"><span style="text-decoration: underline;"><strong><em>Major Unicorn Production&nbsp;</em></strong></span><span style="text-decoration: underline;"><strong><em></em></strong></span></span></li>
@@ -92,9 +92,27 @@
 
 
 
-  
+  </ul>
+
+  <p>I do not wish to offend anyone, this page is clearly this pages goals, and it will be added to the list of goals moving on with this website!</p>
+
+  <div class="product-container">
+    <!-- Placeholder Product Cards -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product Image">
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product Image">
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product Image">
+    </div>
+    <!-- Add more product cards as needed -->
+  </div>
+
 </body>
 </html>
+
 
   
 
